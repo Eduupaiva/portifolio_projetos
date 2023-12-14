@@ -1,30 +1,11 @@
-Editorial by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Portfólio de Projetos em Data Science e Machine Learning
+Bem-vindo ao meu repositório de projetos em Data Science e Machine Learning! Aqui, você encontrará uma variedade de projetos que explorei e desenvolvi, abrangendo desde análises exploratórias de dados até implementações de modelos avançados de Machine Learning. Cada projeto reflete meu comprometimento com a resolução de problemas complexos por meio da aplicação de técnicas e algoritmos de Machine Learning.
 
+# Como Navegar pelos Projetos:
+Cada projeto tem seu próprio repositório dedicado, onde você pode encontrar detalhes sobre a problemática, as etapas de desenvolvimento, ferramentas utilizadas, e, quando aplicável, links para visualizar as análises exploratórias ou interagir com modelos implementados.
 
-Say hello to Editorial, a blog/magazine-ish template built around a toggleable "locking"
-sidebar (scroll down to see what I mean) and an accordion-style menu. Not the usual landing
-page/portfolio affair you'd expect to see at HTML5 UP, but I figured for my 41st (!!!)
-template I'd change it up a little. Enjoy :)
+Sinta-se à vontade para explorar os repositórios individuais, compartilhar feedback ou fazer perguntas. O aprendizado contínuo é uma jornada, e fico feliz em compartilhar minhas experiências e contribuições neste campo.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+Obrigado por visitar meu portfólio. Se tiver alguma dúvida ou sugestão, não hesite em entrar em contato. Espero que aprecie a exploração dos projetos tanto quanto eu apreciei desenvolvê-los.
 
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+Link para o portifólio de projetos: https://eduupaiva.github.io/portifolio_projetos/
