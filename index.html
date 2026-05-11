@@ -1,15 +1,163 @@
 <!DOCTYPE HTML>
 <!--
-	Editorial e Ciência De dados
+	Editorial by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="pt-BR">
 	<head>
-		<title>Portifolio De Ciencia De Dados</title>
+		<title>Carlos Eduardo Paiva Pupo | Data & BI Analyst</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Analista de Dados com experiência em BI industrial, automação, integração de ERP e APIs, dashboards executivos e ciência de dados aplicada à produção." />
+		<meta name="author" content="Carlos Eduardo Paiva Pupo" />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Carlos Eduardo Paiva Pupo | Data & BI Analyst" />
+		<meta property="og:description" content="Transformo dados industriais, financeiros e comerciais em dashboards, automações, integrações e produtos de dados para tomada de decisão." />
+		<meta property="og:url" content="https://eduupaiva.github.io/portifolio_projetos/" />
+		<meta property="og:image" content="https://eduupaiva.github.io/portifolio_projetos/images/foto.jpg" />
+
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style>
+			/* ── Cards de impacto ── */
+			.impact-cards {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 1.5em;
+				margin: 1.5em 0 2em;
+			}
+			.impact-card {
+				background: #f5f6f7;
+				border-left: 4px solid #f56a6a;
+				border-radius: 0.375em;
+				padding: 1.25em 1.4em;
+			}
+			.impact-card h4 {
+				margin: 0 0 0.4em;
+				font-size: 1em;
+				color: #3d4449;
+			}
+			.impact-card p {
+				margin: 0;
+				font-size: 0.88em;
+				color: #7f888f;
+				line-height: 1.5;
+			}
+
+			/* ── Cards de projeto profissional ── */
+			.project-card {
+				background: #fff;
+				border: 1px solid rgba(210,215,217,0.75);
+				border-radius: 0.375em;
+				padding: 1.6em 1.8em;
+				margin-bottom: 1.6em;
+			}
+			.project-card h3 {
+				margin: 0 0 0.3em;
+				color: #3d4449;
+			}
+			.project-meta {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5em;
+				margin-bottom: 1em;
+			}
+			.badge {
+				display: inline-block;
+				font-size: 0.72em;
+				font-weight: 600;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				padding: 0.25em 0.7em;
+				border-radius: 2em;
+				background: #eff1f2;
+				color: #3d4449;
+			}
+			.badge.status-prod   { background: #d4edda; color: #155724; }
+			.badge.status-dev    { background: #fff3cd; color: #856404; }
+			.badge.status-done   { background: #d1ecf1; color: #0c5460; }
+			.project-block { margin-bottom: 0.9em; }
+			.project-block strong { color: #3d4449; }
+			.stack-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4em;
+				margin-top: 0.3em;
+			}
+			.stack-tag {
+				font-size: 0.75em;
+				background: #eff1f2;
+				padding: 0.2em 0.6em;
+				border-radius: 0.25em;
+				color: #3d4449;
+			}
+			.confidential-note {
+				font-size: 0.8em;
+				color: #9fa3a6;
+				border-left: 3px solid #dee2e6;
+				padding-left: 0.8em;
+				margin-top: 0.8em;
+			}
+
+			/* ── Seção laboratório técnico ── */
+			.lab-section {
+				background: #f5f6f7;
+				border-radius: 0.375em;
+				padding: 1.4em 1.8em;
+				margin-bottom: 1.4em;
+			}
+			.lab-section h3 { margin: 0 0 0.3em; color: #3d4449; }
+
+			/* ── Stack por categoria ── */
+			.stack-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 1.2em;
+				margin: 1em 0;
+			}
+			.stack-category h4 {
+				font-size: 0.85em;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: #f56a6a;
+				margin: 0 0 0.5em;
+				border-bottom: 1px solid rgba(210,215,217,0.75);
+				padding-bottom: 0.3em;
+			}
+			.stack-category ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.stack-category ul li {
+				font-size: 0.88em;
+				color: #3d4449;
+				padding: 0.15em 0;
+			}
+
+			/* ── Timeline ── */
+			.timeline { list-style: none; margin: 0; padding: 0; }
+			.timeline li {
+				border-left: 3px solid #f56a6a;
+				padding: 0 0 1.6em 1.4em;
+				position: relative;
+			}
+			.timeline li::before {
+				content: '';
+				width: 10px; height: 10px;
+				background: #f56a6a;
+				border-radius: 50%;
+				position: absolute;
+				left: -6.5px; top: 4px;
+			}
+			.timeline li:last-child { padding-bottom: 0; }
+			.timeline .tl-title { font-weight: 700; color: #3d4449; margin: 0 0 0.1em; }
+			.timeline .tl-period { font-size: 0.82em; color: #9fa3a6; margin: 0 0 0.5em; }
+			.timeline .tl-body { margin: 0; font-size: 0.9em; }
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -22,242 +170,512 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="index.html" class="logo"><strong>Portifolio De Projetos</strong> De Ciência De dados</a>
+									<a href="index.html" class="logo"><strong>Carlos Eduardo</strong> Paiva Pupo</a>
 									<ul class="icons">
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="https://www.linkedin.com/in/carlos-eduardo-paiva-pupo/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+										<li><a href="https://github.com/eduupaiva" class="icon brands fa-github" target="_blank" rel="noopener"><span class="label">GitHub</span></a></li>
+										<li><a href="https://www.linkedin.com/in/carlos-eduardo-paiva-pupo/" class="icon brands fa-linkedin" target="_blank" rel="noopener"><span class="label">LinkedIn</span></a></li>
 									</ul>
 								</header>
 
-							<!-- Banner -->
+							<!-- Banner / Hero -->
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Olá, seja muito bem-vindo (a) ao meu portfólio de projetos de Ciência de Dados.<br />
-											</h1>
-											<p>Nessa página, eu demonstro minhas habilidades de resolver problemas de negócio
-												utilizando conceitos e ferramentas da Ciência de Dados, através de projetos com dados
-												públicos.<br />
+											<h1>Carlos Eduardo Paiva Pupo</h1>
+											<p><strong>Data &amp; BI Analyst &nbsp;|&nbsp; Industrial Analytics &nbsp;|&nbsp; Analytics Engineering</strong></p>
 										</header>
-										Você vai encontrar também, minhas experiências profissionais, habilidades,
-											ferramentas e conceitos envolvendo a Ciência de Dados. <br /> Sinta-se à vontade para entrar em contato através dos links no final da página.</p>
-										
+										<p>
+											Analista de Dados com experiência em indústria de manufatura.<br />
+											Construo pipelines de dados, dashboards executivos, automações operacionais
+											e aplicações analíticas que conectam ERP, APIs e processos internos à
+											tomada de decisão nas áreas de Produção, Financeiro, Comercial e PCP.
+										</p>
+										<ul class="actions">
+											<li><a href="#projetos-profissionais" class="button big">Ver projetos profissionais</a></li>
+											<li><a href="#contato" class="button big">Entrar em contato</a></li>
+										</ul>
 									</div>
-									<span class="image object">
-										<img src="images/foto.jpg" alt="" />
-									</span>
 								</section>
 
-									<!-- Sobre mim -->
-								<section>
+							<!-- Sobre mim -->
+								<section id="sobre">
 									<header class="main">
 										<h1>Sobre mim</h1>
 									</header>
+									<p>
+										Analista de Dados na <strong>Gesla</strong>, indústria de lã de rocha localizada no Paraná.
+									</p>
+									<p>
+										Atuo em toda a cadeia analítica da empresa: extraio dados via APIs, integro sistemas,
+										construo dashboards executivos e operacionais, automatizo processos e desenvolvo
+										aplicações internas de apoio à tomada de decisão.
+									</p>
+									<p>
+										Antes de migrar para a área de dados, trabalhei por mais de dois anos como assistente
+										financeiro — experiência que me deu visão de negócio para construir soluções orientadas
+										a impacto real, não apenas técnicas.
+									</p>
+									<p>
+										Minha stack principal combina Python, SQL, Power BI, Zoho Analytics e n8n. Estou
+										evoluindo para analytics engineering com bancos relacionais, pipelines ETL e
+										ciência de dados industrial aplicada a processos produtivos.
+									</p>
+								</section>
 
-									<!-- Content -->
-										<h2 id="content">Meu nome é Carlos Eduardo </h2>
-										<p>Sou formado em Administração e tenho experiencias anteriores de trabalho com Financeiro .</p>
-										<p>Atualmente, trabalho com projetos de Ciencia de Dados utilizando dados publicos para adquirir experiencia na solução de problemas de negocio e dominio sobre as ferramentas de analise de dados</p>
-										<p>Estou buscando uma oportunidade de trabalhar profissionalmente como Analista de
-											Dados para melhorar a tomada de decisão da empresa, através da construção de
-											soluções usando dados.</p>
-									</section>
-
-
-
-							<!-- Section -->
+							<!-- Cards de impacto -->
 								<section>
 									<header class="major">
-										<h2>Habilidades</h2>
+										<h2>Domínios de atuação</h2>
 									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Linguagens de Programação </h3>
-												<ul>
-													<li>Python com foco em análise de dados.</li>
-													<li>Pensamento Estratégico
-													<li>Conceitos de ETL</li>
-													<li>SQL Language</li>
-													
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Estatística e Machine Learning</h3>
-												<ul>
-													<li> Estatística descritiva ( localização, dispersão, assimetria, kurtosis, densidade) </li>
-													<li> Algoritmos de Regressão, classificação, clusterização </li>
-													<li> Métricas de Performance ( RMSE, MSE, MAE, MAPE, Confusion Matrix, Precision, Recall, ROC Curve, Silhouette Score e R2 ) </li>
-													<li> Pacotes de Machine Learning: Sklearn. </li>
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Visualização de Dados</h3>
-												<ul>
-													<li>Matplotlib, Seaborn, Plotly.</li>
-													<li>Streamlit</li>	
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Engenharia de Software</h3>
-												<ul>
-													<li>Github</li>
-													<li>Streamlit Cloud</li>
-													<li>SQLite3 Database</li>
-													
-												</ul>
-											</div>
-										</article>
+									<div class="impact-cards">
+										<div class="impact-card">
+											<h4>BI Executivo e Operacional</h4>
+											<p>Dashboards de produção, financeiro, comercial e PCP conectados ao ERP, com indicadores de gestão à vista.</p>
+										</div>
+										<div class="impact-card">
+											<h4>Automação e Integração</h4>
+											<p>Alertas operacionais, envios automáticos via WhatsApp e integração de sistemas com n8n, Node-RED e APIs.</p>
+										</div>
+										<div class="impact-card">
+											<h4>Pipelines e APIs de Dados</h4>
+											<p>ETL financeiro e de estoque consumindo APIs REST, consolidação de bases analíticas e preparação para dashboards gerenciais.</p>
+										</div>
+										<div class="impact-card">
+											<h4>Análise Industrial e Eficiência Operacional</h4>
+											<p>Estruturação de indicadores de produção, perdas, subprodutos e eficiência operacional com foco em BI, modelagem de dados e leitura gerencial.</p>
+										</div>
 									</div>
 								</section>
-							<!-- Experiencia -->
-							<section>
-								<header class="main">
-									<h1>Expêriencias Profissionais</h1>
-								</header>		
-								
-								<h2 id="content"> Projetos completos de Ciência de Dados</h2>
-								<p>Construção de soluções de dados para problemas de negócio, próximos dos desafios
-									reais das empresas, utilizando dados públicos de competições de Ciência de Dados,
-									onde eu abordei o problema desde a concepção do desafio de negócio até a
-									publicação do algoritmo treinado em produção, utilizando ferramentas de Cloud
-									Computing.</p>
-								<h2 id="content"> 8+ meses Assistente Financeiro Vulcan Trent</h2>
-								<p> Responsabilidades, junto com análise de risco de credito para novos lojistas e clientes, execução de conciliações bancárias e relatórios de fluxos de caixa, relatório de comissões de representantes, contas a pagar </p>
-								<h2 id="content"> 2+ Anos Assistente Financeiro Scartezini</h2>
-								<p> Responsavel por,  Faturamento, emissão de notas fiscais de produto e serviços, acompanhamento dos fluxos bancários, gestão dos recebivéis, contas a pagar, cobrança, relatório e recebimento de inadimplência. </p>
-							</section>	
 
-							<!-- Section -->
+							<!-- Stack técnica -->
 								<section>
 									<header class="major">
-										<h1>Projetos em Ciência de Dados
-										</h1>
+										<h2>Stack técnica</h2>
 									</header>
+									<div class="stack-grid">
+										<div class="stack-category">
+											<h4>BI &amp; Analytics</h4>
+											<ul>
+												<li>Power BI</li>
+												<li>Zoho Analytics</li>
+												<li>Nomus Dashboard</li>
+												<li>DAX / Power Query</li>
+												<li>Excel Avançado</li>
+												<li>Storytelling com dados</li>
+											</ul>
+										</div>
+										<div class="stack-category">
+											<h4>Data Engineering</h4>
+											<ul>
+												<li>Python (Pandas, Requests)</li>
+												<li>SQL (PostgreSQL, MySQL)</li>
+												<li>DBeaver</li>
+												<li>APIs REST / JSON</li>
+												<li>ETL / ELT</li>
+												<li>Parquet, CSV</li>
+											</ul>
+										</div>
+										<div class="stack-category">
+											<h4>Automação</h4>
+											<ul>
+												<li>n8n</li>
+												<li>Node-RED</li>
+												<li>Webhooks</li>
+												<li>WhatsApp Business API</li>
+												<li>ERP Nomus (integração)</li>
+											</ul>
+										</div>
+										<div class="stack-category">
+											<h4>Data Science</h4>
+											<ul>
+												<li>Scikit-learn</li>
+												<li>XGBoost / Random Forest</li>
+												<li>SHAP</li>
+												<li>Análise exploratória</li>
+												<li>CEP industrial</li>
+												<li>Séries temporais</li>
+											</ul>
+										</div>
+										<div class="stack-category">
+											<h4>Aplicações &amp; Deploy</h4>
+											<ul>
+												<li>Streamlit</li>
+												<li>React + Vite + TypeScript</li>
+												<li>Django</li>
+												<li>Netlify / GitHub Pages</li>
+												<li>Supabase</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+
+							<!-- Projetos profissionais -->
+								<section id="projetos-profissionais">
+									<header class="major">
+										<h1>Projetos profissionais</h1>
+									</header>
+									<p>Projetos desenvolvidos na <strong>Gesla</strong> e empresas do grupo — cobrindo BI, automação, integração de sistemas, análise operacional e desenvolvimento de aplicações internas. Os cases são descritos de forma resumida, sem exposição de dados internos ou informações sensíveis.</p>
+
+									<!-- Projeto 1 -->
+									<div class="project-card">
+										<h3>GIA — Gesla Inteligência Aplicada</h3>
+										<div class="project-meta">
+											<span class="badge">Automação Operacional</span>
+											<span class="badge">Integração de Sistemas</span>
+											<span class="badge status-prod">Em operação · Em evolução</span>
+										</div>
+										<div class="project-block">
+											<strong>Problema:</strong>
+											<p>Informações operacionais críticas ficavam dispersas em sistemas, planilhas e comunicação informal, dificultando respostas rápidas, rastreabilidade e acompanhamento diário das áreas.</p>
+										</div>
+										<div class="project-block">
+											<strong>Solução:</strong>
+											<p>Criação da GIA — uma camada de automação e inteligência aplicada que envia alertas, relatórios e mensagens operacionais via WhatsApp, conectando ERP, APIs e processos internos. Áreas atendidas: Comercial, PCP, Financeiro, Qualidade e Pós-Vendas.</p>
+										</div>
+										<div class="project-block">
+											<strong>Stack:</strong>
+											<div class="stack-tags">
+												<span class="stack-tag">n8n</span>
+												<span class="stack-tag">Node-RED</span>
+												<span class="stack-tag">WhatsApp Business API</span>
+												<span class="stack-tag">Webhooks</span>
+												<span class="stack-tag">APIs REST</span>
+												<span class="stack-tag">ERP Nomus</span>
+												<span class="stack-tag">IA Generativa</span>
+											</div>
+										</div>
+										<div class="project-block">
+											<strong>Impacto:</strong>
+											<p>Redução de tarefas manuais repetitivas, aumento da rastreabilidade operacional e criação de uma camada de inteligência aplicada para uso interno.</p>
+										</div>
+									</div>
+
+									<!-- Projeto 2 -->
+									<div class="project-card">
+										<h3>BI Corporativo Integrado ao ERP — Gesla</h3>
+										<div class="project-meta">
+											<span class="badge">BI Executivo</span>
+											<span class="badge">Dashboards Operacionais</span>
+											<span class="badge status-prod">Em operação</span>
+										</div>
+										<div class="project-block">
+											<strong>Problema:</strong>
+											<p>As áreas precisavam acompanhar produção, vendas, faturamento, financeiro, compras e PCP com mais clareza, mas as informações estavam presas em relatórios operacionais ou consultas manuais.</p>
+										</div>
+										<div class="project-block">
+											<strong>Solução:</strong>
+											<p>Criação de dashboards e relatórios no Nomus Dashboard e Zoho Analytics conectados ao ERP, cobrindo Produção, Comercial, Faturamento, Financeiro, Compras, Expedição e PCP. Indicadores: KG produzido, produção por turno/produto/família, faturamento, fluxo de caixa, contas a pagar/receber, subprodutos e perdas.</p>
+											<ul style="margin-top:0.6em; padding-left:1.2em; font-size:0.9em;">
+												<li>Modelagem de regras operacionais específicas: dia operacional com fechamento às 05:20 e visões por turno produtivo (Turno A · B · C).</li>
+											</ul>
+										</div>
+										<div class="project-block">
+											<strong>Stack:</strong>
+											<div class="stack-tags">
+												<span class="stack-tag">Zoho Analytics</span>
+												<span class="stack-tag">Nomus Dashboard</span>
+												<span class="stack-tag">Power BI</span>
+												<span class="stack-tag">Modelagem de dados</span>
+												<span class="stack-tag">Fórmulas customizadas</span>
+												<span class="stack-tag">ERP Nomus</span>
+											</div>
+										</div>
+										<div class="project-block">
+											<strong>Impacto:</strong>
+											<p>Maior visibilidade gerencial e operacional, redução da dependência de relatórios manuais e suporte à tomada de decisão diária.</p>
+										</div>
+									</div>
+
+									<!-- Projeto 3 -->
+									<div class="project-card">
+										<h3>Fechamento Executivo no Zoho Analytics — Gesla</h3>
+										<div class="project-meta">
+											<span class="badge">BI Executivo</span>
+											<span class="badge">Dashboards Gerenciais</span>
+											<span class="badge">Storytelling com Dados</span>
+											<span class="badge status-done">Desenvolvido</span>
+										</div>
+										<div class="project-block">
+											<strong>Problema:</strong>
+											<p>A diretoria precisava de uma visão estruturada para acompanhar indicadores de produção, vendas, faturamento, financeiro e desempenho operacional.</p>
+										</div>
+										<div class="project-block">
+											<strong>Solução:</strong>
+											<p>Criação de visões e dashboards executivos no Zoho Analytics / Nomus Dashboard, consolidando indicadores relevantes para acompanhamento gerencial e leitura estratégica.</p>
+										</div>
+										<div class="project-block">
+											<strong>Stack:</strong>
+											<div class="stack-tags">
+												<span class="stack-tag">Zoho Analytics</span>
+												<span class="stack-tag">Nomus Dashboard</span>
+												<span class="stack-tag">Fórmulas customizadas</span>
+												<span class="stack-tag">Modelagem de indicadores</span>
+												<span class="stack-tag">Dashboards executivos</span>
+												<span class="stack-tag">Storytelling com dados</span>
+											</div>
+										</div>
+										<div class="project-block">
+											<strong>Impacto:</strong>
+											<p>Melhor organização das informações gerenciais, visão consolidada para acompanhamento da diretoria e apoio à leitura executiva dos resultados.</p>
+										</div>
+									</div>
+
+									<!-- Projeto 4 -->
+									<div class="project-card">
+										<h3>BI Gerencial Financeiro via API Omie — ProTec</h3>
+										<div class="project-meta">
+											<span class="badge">Integração via API</span>
+											<span class="badge">ETL Financeiro</span>
+											<span class="badge">BI Gerencial</span>
+											<span class="badge status-done">Desenvolvido</span>
+										</div>
+										<div class="project-block">
+											<strong>Problema:</strong>
+											<p>A empresa precisava consolidar dados financeiros do Omie para criar uma visão gerencial mais estruturada, reduzindo dependência de consultas e exportações manuais.</p>
+										</div>
+										<div class="project-block">
+											<strong>Solução:</strong>
+											<p>Extração de dados financeiros via API Omie, tratamento dos dados com Python, estruturação de base analítica e criação de BI gerencial para acompanhamento financeiro.</p>
+										</div>
+										<div class="project-block">
+											<strong>Stack:</strong>
+											<div class="stack-tags">
+												<span class="stack-tag">Python</span>
+												<span class="stack-tag">Pandas</span>
+												<span class="stack-tag">Requests</span>
+												<span class="stack-tag">API Omie</span>
+												<span class="stack-tag">JSON</span>
+												<span class="stack-tag">CSV / Excel</span>
+												<span class="stack-tag">BI Gerencial</span>
+											</div>
+										</div>
+										<div class="project-block">
+											<strong>Impacto:</strong>
+											<p>Base financeira mais organizada, redução de manipulações manuais e apoio à criação de uma visão gerencial para tomada de decisão.</p>
+										</div>
+									</div>
+
+									<!-- Projeto 5 -->
+									<div class="project-card">
+										<h3>BI de Estoque via API — ProTec / Empresa do Grupo</h3>
+										<div class="project-meta">
+											<span class="badge">BI de Estoque</span>
+											<span class="badge">Integração via API</span>
+											<span class="badge">Consolidação de Dados</span>
+											<span class="badge status-done">Desenvolvido</span>
+										</div>
+										<div class="project-block">
+											<strong>Problema:</strong>
+											<p>A empresa precisava consolidar informações de estoque para melhorar a visão gerencial sobre produtos, locais, famílias e categorias.</p>
+										</div>
+										<div class="project-block">
+											<strong>Solução:</strong>
+											<p>Extração e tratamento de dados via API, estruturação de base analítica e criação de visão gerencial de estoque.</p>
+										</div>
+										<div class="project-block">
+											<strong>Stack:</strong>
+											<div class="stack-tags">
+												<span class="stack-tag">Python</span>
+												<span class="stack-tag">Pandas</span>
+												<span class="stack-tag">APIs REST</span>
+												<span class="stack-tag">CSV / Excel</span>
+												<span class="stack-tag">BI Gerencial</span>
+												<span class="stack-tag">Modelagem de dados</span>
+											</div>
+										</div>
+										<div class="project-block">
+											<strong>Impacto:</strong>
+											<p>Visão mais organizada da posição de estoque, redução de análises manuais e base para acompanhamento gerencial de materiais.</p>
+										</div>
+									</div>
+
+									<!-- Projeto 6 -->
+									<div class="project-card">
+										<h3>Calculadora Técnica Comercial — Isolamento Térmico</h3>
+										<div class="project-meta">
+											<span class="badge">Produto Web</span>
+											<span class="badge">Apoio Técnico a Vendas</span>
+											<span class="badge status-done">Desenvolvido</span>
+										</div>
+										<div class="project-block">
+											<strong>Problema:</strong>
+											<p>O time comercial precisava consultar parâmetros técnicos de isolamento térmico de lã de rocha de forma rápida e padronizada, sem depender de consultas manuais em bases complexas.</p>
+										</div>
+										<div class="project-block">
+											<strong>Solução:</strong>
+											<p>Aplicação web com filtros progressivos para consultar parâmetros de isolamento térmico, disponível internamente — com potencial de evolução para uso por clientes e geração de proposta técnica em PDF.</p>
+										</div>
+										<div class="project-block">
+											<strong>Stack:</strong>
+											<div class="stack-tags">
+												<span class="stack-tag">React</span>
+												<span class="stack-tag">Vite</span>
+												<span class="stack-tag">TypeScript</span>
+												<span class="stack-tag">CSV</span>
+												<span class="stack-tag">GitHub</span>
+												<span class="stack-tag">Netlify</span>
+											</div>
+										</div>
+										<div class="project-block">
+											<strong>Impacto:</strong>
+											<p>Redução de consultas manuais, padronização do atendimento técnico e diferencial comercial baseado em dados.</p>
+										</div>
+									</div>
+
+									<!-- Projeto 7 -->
+									<div class="project-card">
+										<h3>Arquitetura de Dados com Banco Espelhado</h3>
+										<div class="project-meta">
+											<span class="badge">Analytics Engineering</span>
+											<span class="badge">Arquitetura de Dados</span>
+											<span class="badge status-dev">Em estruturação</span>
+										</div>
+										<div class="project-block">
+											<strong>Problema:</strong>
+											<p>A empresa precisava reduzir dependência de exportações manuais e avançar para dashboards mais flexíveis, atualizados e escaláveis.</p>
+										</div>
+										<div class="project-block">
+											<strong>Solução:</strong>
+											<p>Participação na estruturação de arquitetura baseada em banco espelhado do ERP, com consultas SQL via DBeaver, planejamento de servidor PostgreSQL interno, pipelines ETL e separação entre camada transacional e analítica.</p>
+										</div>
+										<div class="project-block">
+											<strong>Stack:</strong>
+											<div class="stack-tags">
+												<span class="stack-tag">SQL</span>
+												<span class="stack-tag">DBeaver</span>
+												<span class="stack-tag">PostgreSQL</span>
+												<span class="stack-tag">MySQL</span>
+												<span class="stack-tag">Python</span>
+												<span class="stack-tag">Power BI</span>
+												<span class="stack-tag">ETL</span>
+											</div>
+										</div>
+										<div class="project-block">
+											<strong>Impacto:</strong>
+											<p>Base técnica para escalar BI, automação e ciência de dados dentro da empresa com independência de exportações manuais.</p>
+										</div>
+									</div>
+								</section>
+
+							<!-- Laboratório técnico -->
+								<section id="laboratorio">
+									<header class="major">
+										<h2>Laboratório técnico</h2>
+									</header>
+									<p>Projetos de estudo desenvolvidos durante a formação em ciência de dados. Demonstram domínio de Python, Machine Learning, Streamlit, deploy e análise exploratória — não representam o núcleo da experiência profissional atual.</p>
+
 									<div class="posts">
 										<article>
-											<a href="https://github.com/Eduupaiva/fome_zero_project" class="image"><img src="images/food_icon.jpg" alt="" /></a>
-											<h3>Desenvolvimento de um Painel Gerencial para Marketplace de entregas com o Streamlit.</h3>
-											<p>Nesse projeto, os conceitos de Programação em Python, manipulação de
-											dados, pensamento estratégico e lógica de negócio, junto com ferramentas
-											de desenvolvimetno web como o Streamlit e Github, foram usados para
-											desenvolver um painel gerencial com as principais métricas de uma empresa
-											marketplace de delivery de comida na India.
-											</p>
-											<p> O resultado final do projeto foi um painel hospedado em um ambiente Cloud
-											e disponibilizado através de um link web. O painel pode ser acessado por
-											qualquer dispositivo conectado na internet.</p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li>Python, Pandas</li>
-												<li>Jupyter Lab</li>
-												<li>Terminal</li>
-												<li>Streamlit</li>
-												<li>Streamlit Cloud</li>
-												<li>Github</li>
-											</ul>
-				
+											<a href="https://github.com/Eduupaiva/fome_zero_project" class="image" target="_blank" rel="noopener"><img src="images/food_icon.jpg" alt="Projeto Fome Zero" /></a>
+											<h3>Painel Gerencial — Marketplace de Delivery</h3>
+											<p>Dashboard gerencial construído com Streamlit para um marketplace de delivery de comida na Índia. Aplica manipulação de dados com Pandas, lógica de negócio e visualização interativa, com deploy em nuvem.</p>
+											<div class="stack-tags" style="margin-bottom:1em;">
+												<span class="stack-tag">Python</span>
+												<span class="stack-tag">Pandas</span>
+												<span class="stack-tag">Streamlit</span>
+												<span class="stack-tag">Plotly</span>
+												<span class="stack-tag">GitHub</span>
+											</div>
 											<ul class="actions">
-												<li><a href="https://github.com/Eduupaiva/fome_zero_project" class="button">Saiba Mais</a></li>
+												<li><a href="https://github.com/Eduupaiva/fome_zero_project" class="button" target="_blank" rel="noopener">Ver no GitHub</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/img2.jpg" alt="" /></a>
-											<h3> Ensaio De Machine Learning </h3>
-											<p> Nesse projeto, foram explorados os principais conceitos do treinamento, ajuste de parâmetros e limiares entre overfitting e underfitting de vários algoritmos de Machine Learning dentro das tarefas de classificação, regressão e agrupamento, através de um ensaio de Machine Learning. </p>
-											<p> O resultado final do projeto foi um painel mostrando a performance desses algoritmos de Machine Learning, a partir da variações dos valores dos principais parâmetros de cada algoritmo, que controlam o estado de overfitting e underfitting. </p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li> Python 3.9 e Scikit-learn</li>
-												<li> Algoritmos de classificação: KNN, Decision Tree, Random Forest e Logistic Regression </li>
-												<li> Métricas de performance: Accuracy, Precision, Recall e F1-Score </li>
-												<li> Algoritmos de regressão: Linear Regression, Decision Tree Regressor, Random Forest Regressor, Polinomial Regression, Linear Regression Lasso, Linear Regression Ridge, Linear Regression Elastic Net, Polinomial Regression Lasso, Polinomial Regression Ridge e Polinomial Regression Elastic Net</li>
-												<li> Métricas de performance: R2, MSE, RMSE, MAE e MAPE </li>
-												<li> Algoritmos de agrupamento: K-Means e Affinity Propagation </li>
-												<li> Métricas de performance: Silhouette Score </li>
-												
-											</ul>
-										
+											<a href="https://github.com/Eduupaiva/ensaio_machine_learning" class="image" target="_blank" rel="noopener"><img src="images/img2.jpg" alt="Ensaio Machine Learning" /></a>
+											<h3>Ensaio de Machine Learning</h3>
+											<p>Análise comparativa de algoritmos de classificação, regressão e clusterização, explorando overfitting, underfitting e métricas de performance (Accuracy, F1, RMSE, Silhouette Score).</p>
+											<div class="stack-tags" style="margin-bottom:1em;">
+												<span class="stack-tag">Python</span>
+												<span class="stack-tag">Scikit-learn</span>
+												<span class="stack-tag">Pandas</span>
+												<span class="stack-tag">KNN</span>
+												<span class="stack-tag">Random Forest</span>
+												<span class="stack-tag">XGBoost</span>
+											</div>
 											<ul class="actions">
-												<li><a href="https://github.com/Eduupaiva/ensaio_machine_learning" class="button">Saiba Mais</a></li>
+												<li><a href="https://github.com/Eduupaiva/ensaio_machine_learning" class="button" target="_blank" rel="noopener">Ver no GitHub</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/rossmann.jpg" alt="" /></a>
-											<h3> Projeto de Previsão de Vendas na Rossmann </h3>
-											<p> Nesse projeto, foi possível  conduzir uma análise abrangente para prever as vendas diárias nas lojas da Rossmann, empregando técnicas avançadas de Machine Learning. O objetivo era criar um modelo robusto que considerasse variáveis como promoções, concorrência, feriados e sazonalidade, proporcionando aos gerentes de loja a capacidade de otimizar suas estratégias e escalas de trabalho.  </p>
-											<p> O resultado final é um modelo de previsão baseado em XGBoost, implementado com sucesso em uma API no Telegram. Os usuários podem acessar previsões precisas de vendas para as próximas 6 semanas, permitindo uma gestão eficiente das operações das lojas.  </p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li> Python 3.9 e Scikit-learn</li>
-												<li> Bibliotecas como pandas, numpy, matplotlib, seaborn </li>
-												<li> Algoritmos de Regressão: Linear Regression, Lasso, Random Forest, XGBoost </li>
-												<li> Métricas de performance: R2, MSE, RMSE, MAE, MAPE E MAP </li>
-												<li> Machine Learning com XGBoost </li>
-												<li> API no Telegram para disponibilizar previsões de vendas específicas para cada loja </li>
-									
-												
-											</ul>
-										
+											<a href="https://github.com/Eduupaiva/rossman_project" class="image" target="_blank" rel="noopener"><img src="images/rossmann.jpg" alt="Rossmann Sales Forecast" /></a>
+											<h3>Rossmann Sales Forecast</h3>
+											<p>Modelo XGBoost para previsão de vendas diárias das lojas Rossmann para as próximas 6 semanas, com pipeline completo de EDA → treinamento → validação → deploy via API no Telegram.</p>
+											<div class="stack-tags" style="margin-bottom:1em;">
+												<span class="stack-tag">Python</span>
+												<span class="stack-tag">XGBoost</span>
+												<span class="stack-tag">Scikit-learn</span>
+												<span class="stack-tag">Telegram API</span>
+												<span class="stack-tag">Flask</span>
+											</div>
 											<ul class="actions">
-												<li><a href="https://github.com/Eduupaiva/rossman_project" class="button">Saiba Mais</a></li>
+												<li><a href="https://github.com/Eduupaiva/rossman_project" class="button" target="_blank" rel="noopener">Ver no GitHub</a></li>
 											</ul>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/airbnb.jpg" alt="" /></a>
-											<h3> Projeto de Previsão de Preços para Anúncios no Airbnb - Rio de Janeiro </h3>
-											<p> Nesse projeto foi possível explorar o universo do Airbnb no Rio de Janeiro, aplicando técnicas de Machine Learning para prever preços de anúncios. O objetivo era criar um modelo capaz de fornecer insights valiosos para anfitriões e locatários, permitindo uma tomada de decisão mais informada.  </p>
-											<p> O modelo inicial, baseado em Extratrees, entregou resultados impressionantes. No entanto, para viabilizar o deploy do projeto, fiz uma transição estratégica para o XGBoost, ajustando a complexidade do modelo. Essa mudança, embora tenha impactado algumas métricas, foi essencial para tornar o projeto funcional e eficaz. </p>
-											<p> O produto final é um painel online intuitivo, hospedado na nuvem, acessível a qualquer dispositivo. Anfitriões e locatários podem explorar previsões de preços com base nas características dos imóveis, tornando o processo de precificação mais transparente e eficiente. </p>
-											<h4>As ferramentas utilizadas foram:</h4>
-											<ul>
-												<li> Python 3.9 e Scikit-learn</li>
-												<li> Bibliotecas como pandas, numpy, matplotlib, seaborn </li>
-												<li> Algoritmos de Regressão: Random Forest, Linear Regression, ExtraTrees, XGBoost </li>
-												<li> Métricas de Performance: R², MAE, MAPE, RMSE </li>
-												<li> Streamlit para construção do painel online </li>
-												<li> GitHub </li>
-									
-												
-											</ul>
-										
+											<a href="https://github.com/Eduupaiva/Project_Airbnb_Rio" class="image" target="_blank" rel="noopener"><img src="images/airbnb.jpg" alt="Airbnb Rio Pricing" /></a>
+											<h3>Airbnb Rio — Previsão de Preços</h3>
+											<p>Modelo de regressão para prever preços de anúncios no Airbnb Rio de Janeiro, com análise comparativa entre ExtraTrees e XGBoost e painel interativo hospedado em nuvem.</p>
+											<div class="stack-tags" style="margin-bottom:1em;">
+												<span class="stack-tag">Python</span>
+												<span class="stack-tag">XGBoost</span>
+												<span class="stack-tag">ExtraTrees</span>
+												<span class="stack-tag">Streamlit</span>
+												<span class="stack-tag">GitHub</span>
+											</div>
 											<ul class="actions">
-												<li><a href="https://github.com/Eduupaiva/Project_Airbnb_Rio" class="button">Saiba Mais</a></li>
+												<li><a href="https://github.com/Eduupaiva/Project_Airbnb_Rio" class="button" target="_blank" rel="noopener">Ver no GitHub</a></li>
 											</ul>
 										</article>
 									</div>
 								</section>
 
-								<!-- Contato -->
-								<section>
-								
-										<section>
-											<header class="major">
-												<h2>Entre em Contato</h2>
-											</header>
-											<p>Sinta-se à vontade para entrar em contato:</p>
-											<ul class="contact">
-												<li class="icon solid fa-envelope"><a href="#">Eduardo.pupo27@gmail.com</a></li>
-												<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/carlos-eduardo-paiva-pupo/">Linkedin</a></li>
-												<li class="icon solid fa-home">Paraná<br />
-											</ul>
-										</section>
-									</section>
+							<!-- Experiência profissional -->
+								<section id="experiencia">
+									<header class="main">
+										<h1>Experiência profissional</h1>
+									</header>
+									<ul class="timeline">
+										<li>
+											<p class="tl-title">Gesla — Analista de Dados</p>
+											<p class="tl-period">Presente · Indústria de lã de rocha, Paraná, Brasil</p>
+											<p class="tl-body">
+												BI corporativo (Produção, Financeiro, Comercial, PCP), integração de sistemas via APIs REST,
+												automação de processos com n8n e Python, ciência de dados industrial, analytics engineering
+												com pipelines ETL e banco espelhado do ERP, desenvolvimento de aplicações internas
+												(Streamlit, React) e apresentações executivas para diretoria.
+												<br /><em>Ferramentas: Power BI · Zoho Analytics · Nomus Dashboard · Python · SQL · n8n · APIs REST</em>
+											</p>
+										</li>
+										<li>
+											<p class="tl-title">Scartezini — Assistente Financeiro</p>
+											<p class="tl-period">2+ anos</p>
+											<p class="tl-body">Faturamento, emissão de notas fiscais, acompanhamento de fluxos bancários, gestão de recebíveis, contas a pagar, cobrança e controle de inadimplência.</p>
+										</li>
+										<li>
+											<p class="tl-title">Vulcan Trent — Assistente Financeiro</p>
+											<p class="tl-period">8+ meses</p>
+											<p class="tl-body">Análise de risco de crédito para novos clientes, conciliações bancárias, relatórios de fluxo de caixa, comissões de representantes e contas a pagar.</p>
+										</li>
+									</ul>
+								</section>
+
+							<!-- Contato -->
+								<section id="contato">
+									<header class="major">
+										<h2>Entre em contato</h2>
+									</header>
+									<p>Disponível para conversas sobre projetos de dados, BI, automação e oportunidades profissionais.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:Eduardo.pupo27@gmail.com">Eduardo.pupo27@gmail.com</a></li>
+										<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/carlos-eduardo-paiva-pupo/" target="_blank" rel="noopener">linkedin.com/in/carlos-eduardo-paiva-pupo</a></li>
+										<li class="icon brands fa-github"><a href="https://github.com/eduupaiva" target="_blank" rel="noopener">github.com/eduupaiva</a></li>
+										<li class="icon solid fa-map-marker-alt">Paraná, Brasil</li>
+									</ul>
+								</section>
 
 						</div>
 					</div>
 
-				
 			</div>
 
 		<!-- Scripts -->
